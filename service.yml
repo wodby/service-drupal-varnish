@@ -18,3 +18,6 @@ configs:
 env:
 - name: VARNISH_CONFIG_PRESET
   value: drupal
+# Big headers in Drupal Cache-tags.
+- name: VARNISHD_PARAM_HTTP_RESP_HDR_LEN
+  value: 16k
