@@ -1,0 +1,20 @@
+name: drupal-varnish
+type: service
+from: varnish
+title: Varnish (Drupal)
+
+update: auto
+    
+labels:
+- drupal
+- varnish
+
+configs:
+- name: drupal
+  title: Drupal preset
+  filepath: /etc/gotpl/preset/drupal.vcl.tmpl
+  config: drupal.vcl.tmpl
+
+env:
+- name: VARNISH_CONFIG_PRESET
+  value: drupal
