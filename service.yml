@@ -1,6 +1,7 @@
 name: drupal-varnish
 type: service
 from: varnish
+fromVersion: "^1.0.0"
 title: Varnish (Drupal)
 
     
