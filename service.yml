@@ -2,10 +2,10 @@ name: drupal-varnish
 type: service
 from: varnish
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.0"
+fromVersion: "1.0.1"
 title: Varnish (Drupal)
 
-    
+
 labels:
 - drupal
 - varnish
