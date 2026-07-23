@@ -2,7 +2,7 @@ name: drupal-varnish
 type: service
 from: varnish
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.3"
+fromVersion: "1.0.4"
 title: Varnish (Drupal)
 
 
@@ -14,7 +14,9 @@ configs:
 - name: drupal
   title: Drupal preset
   filepath: /etc/gotpl/preset/drupal.vcl.tmpl
-  config: drupal.vcl.tmpl
+  default:
+    source: image
+    filepath: /etc/gotpl/presets/drupal.vcl.tmpl
 
 env:
 - name: VARNISH_CONFIG_PRESET
